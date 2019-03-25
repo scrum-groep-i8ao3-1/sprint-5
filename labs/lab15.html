@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab15</title>
+</head>
+<body>
+<script>
+    function vervangen(tekst,woord,nieuwewoord) {
+        tekst = tekst.replace(woord, nieuwewoord);
+        return tekst;
+    }
+    tekst = 'dit document is een lang document maar een simpel document';
+    resultaat = vervangen(tekst,'document','script');
+    document.write(resultaat);
+</script>
+</body>
+</html>

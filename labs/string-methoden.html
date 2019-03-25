@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string-methoden</title>
+</head>
+<body>
+<script>
+    var titel = 'javascript';
+    document.write('<br>index van letter s is : ' +
+        titel.indexOf('s'));
+    var string =
+        "dit is een lange tekst met daarin het woord javascript";
+    document.write('<br>index van letter javascript is is : ' +
+        string.indexOf("javascript"));
+    document.write('<br>index van letter HTML is is : ' +
+        string.indexOf("HTML"));
+    if(navigator.userAgent.indexOf('MSIE')!= -1){
+        document.write('<br>Browser is internet explorer');
+    }
+    if(navigator.userAgent.indexOf('Firefox')!= -1){
+        document.write('<br>Browser is firefox');
+    }
+    if(navigator.userAgent.indexOf('Chrome')!= -1){
+        document.write('<br>Browser is chrome');
+    }
+    var titel = 'javascript';
+    document.write('<br>de lengthe van titel = '+ titel.length);
+    var titel = 'javascript';
+    var spiegeling = ' '; for(x=0;x< titel.length;x++){
+        teken = titel.charAt(x);
+        spiegeling = teken + spiegeling;
+    }
+    document.write('<br>Javascript gespiegeld: ' + spiegeling);
+    var tekst = 'dit is een lange tekst met daarin het woord javascript';
+    splitsing = tekst.split(' ');
+    document.write('<br>de resulterende array is : '+ splitsing);
+    var string =
+        'dit is een lange string met daarin het woord javascript';
+    document.write('<br>substring methode: '+ string.substring(10,23));
+    string = string.substr(0,string.indexOf('javascript')) +
+            string.substr(string.indexOf('javascript')+10, string.length);
+    document.write('<br>String is nu: '+ string);
+    var cursus = prompt('kies een van de volgende '+
+    'cursussen HTML of Javascript');
+    if(cursus.toLowerCase() == 'html' || cursus.toLowerCase() == 'javascript'){
+        document.write('<br>Je hebt: '+cursus.toUpperCase()+' gekozen.');
+    }else{
+        document.write('<Br>kies een geldige cursus')
+    }
+</script>
+</body>
+</html>
