@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while-lus</title>
+</head>
+<body>
+<script>
+    var vandaag = new Date();
+    var uur = vandaag.getHours();
+    var minuten = vandaag.getMinutes();
+    var seconden = vandaag.getSeconds();
+    var miliseconden = vandaag.getMilliseconds();
+    var lus = miliseconden;
+    var finish = lus + 3;
+    document.write('<br>while-lus begint om : '+uur+':'+minuten+':'+seconden+':'+ miliseconden);
+    while(lus<finish){
+
+        lus = new Date().getMilliseconds();
+        if(lus == miliseconden +1){
+           continue;
+        }
+        if(lus == miliseconden+2){
+            document.write('<br>while-lus voortijdig beeindigd');
+            break;
+        }
+        document.write('<br>Deze lus om: '+ lus);
+    }
+    document.write('<br>while-lus eindigt om: '+uur+':'+minuten+':'+seconden+':'+ lus);
+    function test(){
+        document.write("test");
+    }
+</script>
+</body>
+</html>
