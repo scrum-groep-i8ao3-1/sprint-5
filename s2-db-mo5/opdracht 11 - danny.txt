@@ -1,0 +1,14 @@
+select tblEvent.EventName ,
+ case
+ -- friday the 9th of march in 2002
+ --nagekeken door jairo :D
+ when datepart(weekday, tblevent.eventdate) = 1  then 'Monday ' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ when datepart(weekday, tblevent.eventdate) = 2  then 'Teusday ' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ when datepart(weekday, tblevent.eventdate) = 3  then 'Wednesday ' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ when datepart(weekday, tblevent.eventdate) = 4  then 'Thursday' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ when datepart(weekday, tblevent.eventdate) = 5  then 'Friday ' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ when datepart(weekday, tblevent.eventdate) = 6  then 'Saturday ' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ when datepart(weekday, tblevent.eventdate) = 7  then 'Sunday ' + format(tblevent.eventdate,'dd') + 'th '+format(tblevent.eventdate,'MM') +' ' + format(tblevent.eventdate, 'yyyy')
+ end as 'full date'
+from tblEvent
+order by tblevent.EventDate
