@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB14</title>
+</head>
+<body>
+<script>
+    //nagekeken door jairo
+    alfa = ("abcdefghijklmnopqrstuvwxyz").split("");
+    function niewewoorden(array){
+        string = "";
+        lengthe = array.length;
+        for(x = 0; x <= 4;x++){
+            randomnummer = Math.floor(Math.random() * (array.length));
+            letter = array[randomnummer];
+            string += letter;
+        }
+        document.write(string);
+    }
+    niewewoorden(alfa);
+</script>
+
+</body>
+</html>
