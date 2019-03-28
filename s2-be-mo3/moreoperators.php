@@ -11,3 +11,4 @@ lijn("/= deelt het bedrag met een * getal");
 function lijn($tekts){
     echo $tekts."<br>";
 }
+?>

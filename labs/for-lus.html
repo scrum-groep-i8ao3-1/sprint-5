@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>de for-lus</title>
+    <!--dit script: werkt met de for lus-->
+</head>
+<body>
+<script>
+    for(x = 0;x < 3;x++){
+        document.write(("dit is lus: "+''+ x ))
+    }
+    student = new Array('zakaria','albert','hamsa','mike','pieter','harry');
+    for(x = 0;x<student.length; x++){
+        document.write('<br>element '+x+" is "+ student[x]);
+    }
+    for(x = 0;x<(student.length); x = x + 2){
+        document.write('<br>element '+x+" is "+ student[x]);
+    }
+    var tekst = "hij lijkt een beetje op nelson mandela";
+    length = tekst.length;
+    spaties = 0;
+    document.write('<br>');
+    for(x = 0; x<length;x++){
+        teken = tekst.charAt(x);
+        document.write(teken);
+        if(teken === ' '){
+            spaties++;
+        }
+    }
+    document.write("<br> de tekst bevat "+spaties+" spaties<br>");
+    var antwoord = prompt("u telefoon nummer aub");
+    var getal = new Array();
+    getal[0] = 'nul';
+    getal[1] = 'een';
+    getal[2] = 'twee';
+    getal[3] = 'drie';
+    getal[4] = 'vier';
+    getal[5] = 'vijf';
+    getal[6] = 'zes';
+    getal[7] = 'zeven';
+    getal[8] = 'acht';
+    getal[9] = 'negen';
+    for(x = 0;x < antwoord.length;x++){
+        if(getal[antwoord[x]] === undefined){
+            document.write(antwoord[x]+" is geen nummer");
+            exit();
+        }else {
+            document.write((getal[antwoord[x]]) + " ");
+        }
+    }
+
+    function exit(){
+        stop();
+    }
+</script>
+</body>
+</html>
