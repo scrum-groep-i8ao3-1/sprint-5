@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab15</title>
+</head>
+<body>
+<input type="text" id="tekst" value=""> tekst hier
+<br>
+<input type="text" id="orgineel" value=""> orgineel woord hier
+<br>
+<input type="text" id="replacer" value="">  replacer hier
+<br>
+<button type="button" onclick="uitvoeren()">druk hier als je alles hebt in gevult</button>
+<script>
+    //nagekeken door jairo en tom
+    function uitvoeren(){
+        const tekst = document.getElementById("tekst").value;
+        const woord = document.getElementById("orgineel").value;
+        const nieuwwoord = document.getElementById("replacer").value;
+        vervangen(tekst,woord,nieuwwoord);
+    }
+    function vervangen(tekst,woord,nieuwewoord) {
+        try{
+            var tekst2 = tekst.replace(woord, nieuwewoord);
+            document.write(tekst2);
+        }catch{
+            document.write("in de zin " + tekst + "zit het woord " + woord +" niet verwerkt");
+        }
+    }
+</script>
+</body>
+</html>
