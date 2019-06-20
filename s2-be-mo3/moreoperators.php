@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 <?php
 lijn("Ternary operator zijn operators met 3 parameters ");
 lijn("dot(.) operator geef plaats om een variable in een string te inserten");
@@ -12,3 +15,4 @@ function lijn($tekts){
     echo $tekts."<br>";
 }
 ?>
+>>>>>>> 82b04dfe7066b308db12aa882353fd5585e19ca5

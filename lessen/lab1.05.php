@@ -1,31 +1,46 @@
 <?php
-echo "<br>--- opgave 5";
-$producten = [];
-$producten[0] = "boeken";
-$producten[1] = "CD's";
-$producten[2] = "Smartphones";
-$producten[3] = "DVD'S";
-echo "<br>--- opgave 6 : print_r9();";
-print_r($producten);
-echo "<br>--- opgave 7 : var_dump();";
-var_dump($producten);
-echo "<br>--- opgave 8";
-unset($producten[2]);
-print_r($producten);
-echo "<br>--- opgave 9";
-$gevonden = array_key_exists(1,$producten);
-echo "Key 1 gevonden?: ".$gevonden;
-echo "<br>--- opgave 10";
-$gevonden = in_array("CD's", $producten);
-echo "boek gevonden ?: ".$gevonden;
-echo "<br>--- opgave 12";
-array_push($producten,"laptops","TABLETS");
-print_r($producten);
-echo "<br>--- opgave 14";
-$eersteelement = array_shift($producten);
-echo $eersteelement.'verwijderd: ';
-print_r($producten);
-echo "<br>--- opgave 15";
-array_unshift($producten,"tv,s","stereo's");
-echo "tv,s en stereo,s toe gevoegd";
-print_r($producten);
+//gemaakt door danny lanssink
+//nagekeken door tom 3-4-2019-09:17
+error_reporting(E_ERROR | E_PARSE);
+function br()
+{
+    echo "<br>";
+}
+function toonarray($array, $nummer)
+{
+    $lijst = explode("-", "3-6-8-12-14-16");
+    echo "stap " . $lijst[$nummer] . ": ";
+    for ($i = 0; $i < count($array); $i++) {
+        echo " ";
+        print_r($array[$i]);
+    }
+    br();
+}
+//1.05 array metodes
+//gemaakt door danny lanssink
+$array = ["een","twee",3,"vier"]; //1 gedaan
+array_push($array,5); // gedaan
+toonarray($array,0); //3 gedaan
+echo "stap 4 : datatype is : ".gettype($array[4])."<br>"; //4 gedaan
+unset($array[4]); //5 gedaan
+toonarray($array,1); //6 gedaan
+$niks = "nul"; //7
+array_unshift($array,$niks);//7 gedaan
+toonarray($array,2); //8 gedaan
+unset($array[0]); //GEDAAN https://www.geeksforgeeks.org/removing-array-element-and-re-indexing-in-php/
+$undefined = "error";  //zorgt ervoor dat undefined "undefined" word inplaats van null wat een error geeft/gooit.
+    if($array[0] == null) {
+        $undefined = "undefined";
+    }
+echo "stap 10 : datatype is : " . $undefined . ""; //10 gedaan //PROBLEEM gefixt (met hulp van daniel);
+br();
+unset($array[0]); //delete het eerste element of tewel element 0 //11 gedaan
+array_push($array,"vier"); //snelle fix "VIER" mist;
+toonarray($array,3);
+unset($array[count($array)]); // haalt "DE EXTRA 4 weg"
+array_splice($array,1,1); //11 gedaan
+toonarray($array,4); //12 gedaan
+if($array[2] =! null){
+    array_splice($array,2,1); //11 gedaan
+}
+toonarray($array,5);
